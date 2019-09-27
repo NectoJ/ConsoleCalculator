@@ -2,7 +2,7 @@ package ch.bbw.ConsoleCalculator;
 
 /**
  * Calculator
- * - Creates a sum from two numbers together
+ * Creates a sum from two numbers together
  * 
  * 
  * @author Jamie Lam
