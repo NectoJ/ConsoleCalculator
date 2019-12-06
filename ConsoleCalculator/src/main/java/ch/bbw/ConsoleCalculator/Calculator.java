@@ -11,8 +11,12 @@ package ch.bbw.ConsoleCalculator;
 
 public class Calculator {
 
-	public int sum(int sum1, int sum2) {
-		return sum1 + sum2;
+	public int sum(int value1, int value2) {
+		return value1 + value2;
 	}
+
+	public int subtraction(int value1, int value2) {
+	    return value1 - value2;
+    }
 	
 }
