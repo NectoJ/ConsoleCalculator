@@ -10,7 +10,7 @@ package ch.bbw.ConsoleCalculator;
  */
 
 public class Calculator {
-	
+
 	public int sum(int sum1, int sum2) {
 		return sum1 + sum2;
 	}
