@@ -29,4 +29,10 @@ public class CalculatorTest {
     public void testSubtractionTwoPositive() {
         assertTrue(calculator.subtraction(25,10) == 15);
     }
+    
+    @Test(expected=ArithmeticException.class)
+    public void testDivisionWithZero() {
+    	assertTrue(calculator.division(4, 0) == 0);
+    }
+
 }
