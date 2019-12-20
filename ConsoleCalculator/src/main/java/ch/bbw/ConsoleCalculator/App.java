@@ -16,6 +16,8 @@ public class App
     	
     	int firstValue = 10;
 		int secondValue = 20;
-        System.out.println( "First Sum: " + firstValue + " + " + secondValue + " = " + calculator.sum(10, 20) );
+        System.out.println("Addition: " + firstValue + " + " + secondValue + " = " + calculator.sum(firstValue, secondValue) );
+        System.out.println("Subtraction: " + firstValue + " - " + secondValue + " = " + calculator.subtraction(firstValue, secondValue));
+        System.out.println("Division: " + firstValue + " / " + secondValue + " = " + calculator.division(4, 2));
     }
 }
