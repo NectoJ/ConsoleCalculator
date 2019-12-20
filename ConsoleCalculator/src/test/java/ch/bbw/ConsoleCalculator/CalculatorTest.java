@@ -34,5 +34,10 @@ public class CalculatorTest {
     public void testDivisionWithZero() {
     	assertTrue(calculator.division(4, 0) == 0);
     }
+    
+    @Test(expected=ArithmeticException.class)
+    public void testDivisionOneNegativeOneZero() {
+    	assertTrue(calculator.division(-4, 0) == 0);
+    }
 
 }
