@@ -114,6 +114,11 @@ public class CalculatorTest {
     public void testDivisionTwoNegative() {
 	    assertTrue(calculator.division(-4, -2) == 2);
     }
+
+    @Test
+    public void testDivisionPositiveAndNegative() {
+	    assertTrue(calculator.division(4, -2) == -2);
+    }
     
     @Test(expected=ArithmeticException.class)
     public void testDivisionOneNegativeOneZero() {
