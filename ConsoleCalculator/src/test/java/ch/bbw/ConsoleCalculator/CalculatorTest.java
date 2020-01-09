@@ -140,4 +140,9 @@ public class CalculatorTest {
 	    assertTrue(calculator.division(Integer.MAX_VALUE, 1) == 2.147483647E9);
     }
 
+    @Test
+    public void testCompoundInterest() {
+	    assertTrue(calculator.compoundInterest(1200, 4, 5).equals("1459.98"));
+    }
+
 }

@@ -19,5 +19,6 @@ public class App
         System.out.println("Addition: " + firstValue + " + " + secondValue + " = " + calculator.sum(firstValue, secondValue) );
         System.out.println("Subtraction: " + firstValue + " - " + secondValue + " = " + calculator.subtraction(firstValue, secondValue));
         System.out.println("Division: " + firstValue + " / " + secondValue + " = " + calculator.division(4, 2));
+        System.out.println("Compound Interest: " + calculator.compoundInterest(1200, 4, 5));
     }
 }
