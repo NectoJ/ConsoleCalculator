@@ -130,4 +130,9 @@ public class CalculatorTest {
 	    assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
     }
 
+    @Test
+    public void testDivisionMAX_VALUEAndOne() {
+	    assertTrue(calculator.division(Integer.MAX_VALUE, 1) == 2.147483647E9);
+    }
+
 }
