@@ -46,6 +46,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void TestSumAddMAX_VALUEAndMIN_VALUE() {
+	    assertTrue(calculator.sum(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+    }
+
+    @Test
     public void testSubtractionTwoPositive() {
         assertTrue(calculator.subtraction(25,10) == 15);
     }
