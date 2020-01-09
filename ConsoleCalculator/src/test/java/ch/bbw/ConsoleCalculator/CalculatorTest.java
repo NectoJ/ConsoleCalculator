@@ -27,12 +27,12 @@ public class CalculatorTest {
 
     @Test
     public void testSumAddTwoNegative() {
-	    assertTrue(calculator.sum(-10, -20) == -35);
+	    assertTrue(calculator.sum(-10, -20) == -30);
     }
 
     @Test
     public void TestSumAddTwoZero() {
-	    assertTrue(calculator.sum(0, 0) = 0);
+	    assertTrue(calculator.sum(0, 0) == 0);
     }
 
     @Test
