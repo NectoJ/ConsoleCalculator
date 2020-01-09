@@ -26,6 +26,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumAddTwoNegative() {
+	    assertTrue(calculator.sum(-10, -20) == -35);
+    }
+
+    @Test
+    public void TestSumAddTwoZero() {
+	    assertTrue(calculator.sum(0, 0) = 0);
+    }
+
+    @Test
     public void testSubtractionTwoPositive() {
         assertTrue(calculator.subtraction(25,10) == 15);
     }
