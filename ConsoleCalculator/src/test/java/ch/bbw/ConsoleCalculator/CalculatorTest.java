@@ -69,6 +69,11 @@ public class CalculatorTest {
     public void testSubtractionTwoNegative() {
 	    assertTrue(calculator.subtraction(-20,-30) == 10);
     }
+
+    @Test
+    public void testSubtractionPositiveAndNegative() {
+	    assertTrue(calculator.subtraction(10, -20) == 30);
+    }
     
     @Test(expected=ArithmeticException.class)
     public void testDivisionWithZero() {
