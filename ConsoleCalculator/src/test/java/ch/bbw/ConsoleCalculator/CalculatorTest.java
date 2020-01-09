@@ -84,6 +84,11 @@ public class CalculatorTest {
     public void testSubtractionTwoMAX_VALUE() {
 	    assertTrue(calculator.subtraction(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
     }
+
+    @Test
+    public void testSubtractionTwoMIN_VALUE() {
+	    assertTrue(calculator.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
     
     @Test(expected=ArithmeticException.class)
     public void testDivisionWithZero() {
