@@ -64,6 +64,41 @@ public class CalculatorTest {
     public void testSubtractionTwoPositive() {
         assertTrue(calculator.subtraction(25,10) == 15);
     }
+
+    @Test
+    public void testSubtractionTwoNegative() {
+	    assertTrue(calculator.subtraction(-20,-30) == 10);
+    }
+
+    @Test
+    public void testSubtractionPositiveAndNegative() {
+	    assertTrue(calculator.subtraction(10, -20) == 30);
+    }
+
+    @Test
+    public void testSubtractionTwoZero() {
+	    assertTrue(calculator.subtraction(0, 0) == 0);
+    }
+
+    @Test
+    public void testSubtractionTwoMAX_VALUE() {
+	    assertTrue(calculator.subtraction(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
+    }
+
+    @Test
+    public void testSubtractionTwoMIN_VALUE() {
+	    assertTrue(calculator.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
+    @Test
+    public void testSubtractionMAX_VALUEAndMIN_VALUE() {
+	    assertTrue(calculator.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+    }
+
+    @Test
+    public void testSubtractionMAX_VALUEAndOne() {
+	    assertTrue(calculator.subtraction(Integer.MAX_VALUE, 1) == 2147483646);
+    }
     
     @Test(expected=ArithmeticException.class)
     public void testDivisionWithZero() {
