@@ -120,4 +120,9 @@ public class CalculatorTest {
     	assertTrue(calculator.division(-4, 0) == 0);
     }
 
+    @Test
+    public void testDivisionTwoMAX_VALUE() {
+	    assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+    }
+
 }
