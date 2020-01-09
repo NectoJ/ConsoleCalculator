@@ -104,10 +104,40 @@ public class CalculatorTest {
     public void testDivisionWithZero() {
     	assertTrue(calculator.division(4, 0) == 0);
     }
+
+    @Test
+    public void testDivisionTwoPositive() {
+	    assertTrue(calculator.division(4, 2) == 2);
+    }
+
+    @Test
+    public void testDivisionTwoNegative() {
+	    assertTrue(calculator.division(-4, -2) == 2);
+    }
+
+    @Test
+    public void testDivisionPositiveAndNegative() {
+	    assertTrue(calculator.division(4, -2) == -2);
+    }
     
     @Test(expected=ArithmeticException.class)
     public void testDivisionOneNegativeOneZero() {
     	assertTrue(calculator.division(-4, 0) == 0);
+    }
+
+    @Test
+    public void testDivisionTwoMAX_VALUE() {
+	    assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+    }
+
+    @Test
+    public void testDivisionTwoMIN_VALUE() {
+	    assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
+    }
+
+    @Test
+    public void testDivisionMAX_VALUEAndOne() {
+	    assertTrue(calculator.division(Integer.MAX_VALUE, 1) == 2.147483647E9);
     }
 
 }
