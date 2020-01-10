@@ -33,4 +33,8 @@ public class Calculator {
 	public String StringToBinary(int value) {
 		return Integer.toBinaryString(value);
 	}
+	
+	public String StringToHexa(int value) {
+		return Integer.toHexString(value);
+	}
 }
