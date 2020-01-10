@@ -144,5 +144,9 @@ public class CalculatorTest {
     public void testCompoundInterest() {
 	    assertTrue(calculator.compoundInterest(1200, 4, 5).equals("1459.98"));
     }
-
+    
+    @Test
+    public void testStringToBinary() {
+    	assertTrue(calculator.StringToBinary(1954533).equals("111011101001011100101"));
+    }
 }
