@@ -149,4 +149,9 @@ public class CalculatorTest {
     public void testStringToBinary() {
     	assertTrue(calculator.StringToBinary(1954533).equals("111011101001011100101"));
     }
+    
+    @Test
+    public void testStringToHexa() {
+    	assertTrue(calculator.StringToHexa(1954533).equals("1dd2e5"));
+    }
 }
