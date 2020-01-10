@@ -20,5 +20,6 @@ public class App
         System.out.println("Subtraction: " + firstValue + " - " + secondValue + " = " + calculator.subtraction(firstValue, secondValue));
         System.out.println("Division: " + firstValue + " / " + secondValue + " = " + calculator.division(4, 2));
         System.out.println("Compound Interest: " + calculator.compoundInterest(1200, 4, 5));
+        System.out.println("String to Binary: " + calculator.StringToBinary(1954533));
     }
 }
