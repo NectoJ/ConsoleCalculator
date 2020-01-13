@@ -28,11 +28,18 @@ public class Calculator {
 		return value1 / value2;
 	}
 
-	public String compoundInterest(double monopoly, double p, double n) {
+	protected String compoundInterest(double monopoly, double p, double n) {
 		return df.format(monopoly * Math.pow((1 + p / 100), n));
 	}
 	
-	public String StringToBinary(int value) {
+	/**
+	 * Ich benutze keine private Methods da Sie bei JUnit Tests nicht getestet werden können. 
+	 * Begründung: Die Klassen sind voneinander separat.
+	 * 
+	 * Auf jedenfalls funktionieren public, protected und default Methoden.
+	 */
+	
+	String StringToBinary(int value) {
 		return Integer.toBinaryString(value);
 	}
 	
