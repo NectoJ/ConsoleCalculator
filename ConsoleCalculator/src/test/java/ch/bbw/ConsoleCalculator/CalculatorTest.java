@@ -2,6 +2,8 @@ package ch.bbw.ConsoleCalculator;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -153,5 +155,15 @@ public class CalculatorTest {
     @Test
     public void testStringToHexa() {
     	assertTrue(calculator.StringToHexa(1954533).equals("1dd2e5"));
+    }
+    
+    @Test
+    public void testQuadraticEquationFunctioning() {
+    	assertTrue(calculator.QuadraticEquation(1, 4, 3).equals(Arrays.asList(-3.0, -5.0)));
+    }
+    
+    @Test
+    public void testQuadraticEquationMissingA() {
+    	assertTrue(calculator.QuadraticEquation(0, 4, 3).equals(Arrays.asList()));
     }
 }

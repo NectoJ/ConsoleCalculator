@@ -1,6 +1,8 @@
 package ch.bbw.ConsoleCalculator;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Calculator.java
@@ -36,5 +38,33 @@ public class Calculator {
 	
 	public String StringToHexa(int value) {
 		return Integer.toHexString(value);
+	}
+	
+	// Quadratic Equation = ax^2 + bx + c = 0
+	public List<Double> QuadraticEquation(double a, double b, double c) {
+        List<Double> solutions = new ArrayList<Double>();
+        
+        double diskriminant = b * b - 4 * a * c;
+        
+        if (a == 0) {
+        	return solutions;
+        } else {
+	        if (diskriminant >= 0){
+	            if (diskriminant == 0){
+	            	solutions.add(-b/(2*a));
+	            	return solutions;
+	            }
+	            else {
+	               double x1 = -b + Math.sqrt(diskriminant)/(2*a);
+	               double x2 = -b - Math.sqrt(diskriminant)/(2*a);
+	               solutions.add(x1);
+	               solutions.add(x2);
+	               return solutions;
+	            }
+	         }
+	         else {
+	           	return solutions;
+	         }
+        }
 	}
 }
