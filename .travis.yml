@@ -1,3 +1,4 @@
 language: java
 sudo: false
+before_script: cd ConsoleCalculator 
 script: mvn compile
