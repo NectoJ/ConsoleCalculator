@@ -2,10 +2,10 @@ language: java
 sudo: false
 before_script: 
       # Set up git user name and tag this commit
-      git config --local user.name "NectoJ"
-      git config --local user.email "jamielam321@gmail.com"
-      export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      git tag $TRAVIS_TAG
+      - git config --local user.name "NectoJ"
+      - git config --local user.email "jamielam321@gmail.com"
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
         
 script: cd ConsoleCalculator mvn install
 deploy:
