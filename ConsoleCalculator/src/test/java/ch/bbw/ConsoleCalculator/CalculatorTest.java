@@ -148,13 +148,43 @@ public class CalculatorTest {
     }
     
     @Test
+    public void testMinusCompoundInterest() {
+	    assertTrue(calculator.compoundInterest(-1200, 4, 5).equals("-1459.98"));
+    }
+    
+    @Test
+    public void testEmptyCompoundInterest() {
+	    assertTrue(calculator.compoundInterest(0, 0, 0).equals(".00"));
+    }
+    
+    @Test
     public void testStringToBinary() {
     	assertTrue(calculator.StringToBinary(1954533).equals("111011101001011100101"));
     }
     
     @Test
+    public void testStringToBinaryMAX_VALUE() {
+    	assertTrue(calculator.StringToBinary(Integer.MAX_VALUE).equals("1111111111111111111111111111111"));
+    }
+    
+    @Test
+    public void testStringToBinaryMIN_VALUE() {
+    	assertTrue(calculator.StringToBinary(Integer.MIN_VALUE).equals("10000000000000000000000000000000"));
+    }
+    
+    @Test
     public void testStringToHexa() {
     	assertTrue(calculator.StringToHexa(1954533).equals("1dd2e5"));
+    }
+    
+    @Test
+    public void testStringToHexaMAX_VALUE() {
+    	assertTrue(calculator.StringToHexa(Integer.MAX_VALUE).equals("7fffffff"));
+    }
+    
+    @Test
+    public void testStringToHexaMIN_VALUE() {
+    	assertTrue(calculator.StringToHexa(Integer.MIN_VALUE).equals("80000000"));
     }
     
     @Test
@@ -164,6 +194,21 @@ public class CalculatorTest {
     
     @Test
     public void testQuadraticEquationMissingA() {
-    	assertTrue(calculator.QuadraticEquation(0, 4, 3).equals(Arrays.asList()));
+    	assertTrue(calculator.QuadraticEquation(0, 4, 3).isEmpty());
+    }
+    
+    @Test
+    public void testQuadraticEquationMissingB() {
+    	assertTrue(calculator.QuadraticEquation(1, 0, 3).isEmpty());
+    }
+    
+    @Test
+    public void testQuadraticEquationMissingC() {
+    	assertTrue(calculator.QuadraticEquation(1, 4, 0).equals(Arrays.asList(-2.0, -6.0)));
+    }
+    
+    @Test
+    public void testEmptyQuadraticEquation() {
+    	assertTrue(calculator.QuadraticEquation(0, 0, 0).isEmpty());
     }
 }
