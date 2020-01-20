@@ -4,7 +4,7 @@ package ch.bbw.ConsoleCalculator;
  * Console Calculator
  * 
  * @author Jamie Lam
- * @version 0.0.1
+ * @version 1.0.0
  */
 public class App 
 {

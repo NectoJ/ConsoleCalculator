@@ -10,7 +10,7 @@ import org.junit.Test;
 /** CalculatorTest.java
  *
  * @author Jamie Lam
- * @version 30.11.2019
+ * @version 1.0.0
  */
 public class CalculatorTest {
 	

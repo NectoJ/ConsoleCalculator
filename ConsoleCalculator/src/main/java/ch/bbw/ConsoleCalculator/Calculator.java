@@ -9,7 +9,7 @@ import java.util.List;
  * Contains different methods for a fully fledged calculator.
  * 
  * @author Jamie Lam
- * @version 0.0.1
+ * @version 1.0.0
  */
 public class Calculator {
 	
