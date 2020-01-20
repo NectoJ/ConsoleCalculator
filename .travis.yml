@@ -1,16 +1,15 @@
 language: java
 sudo: false
 script: cd ConsoleCalculator mvn install
-before_deploy: 
-      # Set up git user name and tag this commit
-      - git config --local user.name "NectoJ"
-      - git config --local user.email "jamielam321@gmail.com"
-      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      - git tag $TRAVIS_TAG
+before_deploy:
+- git config --local user.name "NectoJ"
+- git config --local user.email "jamielam321@gmail.com"
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+- git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
-    secure: qrJsU85lAB0L4+2H9VheIC1FrQkHxnDPoYgaDZIVWvZ3OnHWavJS2Z65RCO6MqcXitjJihO62OR9v70dXM19xkfezq73W1Dk3UOkMR2TqWy+8w3XsNiUwDJEnw4JJzr/v2ueVwHL7nCHyUUORfB4riqJEP6Rr8miIrAJQ+I2BWiFzBwsrcnBKA13CzUspHgb3V1WrPA8uJWepQ6L+qIwCOg5I1P7STmCNNlzZN+thEdR0EPpcy2EYPfLcIXqpAmL8eTNglLuplnag15GRSMc3wsBATbuRMSIruTTVY/1fMiHNe5DRLsrHpDCaqMJn0jr4V1uNYyv2y1iRwvgP++2/AIO4HwB+E7hVQQ9t8vS3bi681AodulSO/6O/i3BKSIXrMCSuq4MomzhZaNvKAjho40GUs8f9KW5A+x25YhHiBKLeXzQAcARNsy243TXy+wj5IvRPVW6EbmEzRpH8GYHo1ygaHkfkUoOqWCGVtgzSHss48YbUf0xMQXezFolvbNVcT1plWzYXhg1r/Z63Tixz5n7rBCnTwAlGgO4l9Q5hGzKwTY/0Ho4ZZKC79tcr4d0QOFMLMD/oWDEt/q15IzAlrK7+Ur0E5LjhO81kIe1FRdD9IHfTFMzAutmhU7idFdfl0562Bv4aagdilq4EtPltUwvLANz5ulF/MovvZzszeI=
+    secure: RB0AUhbCBL35iqYBX4h80M2ZD+uxlk7Sihx+G+pziw8BjFtpLaCakqrSGV6mRMi8NL27lKABM00okk0vZc5d59uZ1+DqSFl+45j+G1hT2Voc7gEdGN27mS5XyhGJDE8tmoGIt3hfVBSp7lEV1E1gMVEYB77hvdWiz2PRwmVVA0h2cezO8j0/YpNBXNz7qI6vxx5DWlBntlPQabwWn/zdEUJAna/pVhTHvgEnQ1HN9QRSg8IvBLIDnOn1ujev4PvBf875+rxUorDNctIUYkYizQqQPOkT0enjQ2RQKm9795HXYC35TwBQE337HgMNEIMOWWh0iC9c8dWpvVmcETwvTsY+bg+oGYTHruBbKAyCNVGfRWKaKCkJyw9hPUfAGU0jLhTmPNnt7UG9od+SOYrq73FmpDAloEMpL8tggeBnbLLg0P1/GVt21B5mAl3FroHVkfMRheo4t0lznYSVWgH1WP1U18rsyXjfcVlAhlaFoyCfBNESguh/8pOD5vXTlX2keQjudEGdTmKKoQ3lTZX2P7mW3dcmMREYSG/lSOvR/j5ki6/wxvlTm3ag8YSikouDNIF7OLpUIlLZqUQ6m2uzE3PB0OnozB8LlP8SFCBZ6fzgpsrmvGZH3PKdCtfoSKXAU20g9QeUU6Q3MvHfLE3Jovopjv25Csuc8mvoCkHp5ws=
   file: "/home/travis/.m2/repository/ch/bbw/ConsoleCalculator/1.0.0-SNAPSHOT/ConsoleCalculator-1.0.0-SNAPSHOT.jar"
   on:
     repo: NectoJ/ConsoleCalculator
