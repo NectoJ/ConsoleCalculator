@@ -74,4 +74,17 @@ public class Calculator {
 	         }
         }
 	}
+	
+	//PrimeChecker checks if your input is a prime number or not
+	public Boolean PrimeChecker(int n) {
+        if (n <= 1) 
+            return false; 
+  
+        // Check from 2 to n-1 
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+  
+        return true; 
+	}
 }

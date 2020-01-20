@@ -211,4 +211,19 @@ public class CalculatorTest {
     public void testEmptyQuadraticEquation() {
     	assertTrue(calculator.QuadraticEquation(0, 0, 0).isEmpty());
     }
+    
+    @Test
+    public void testPrimeCheckerIsTrue() {
+    	assertTrue(calculator.PrimeChecker(7).equals(true));
+    }
+    
+    @Test
+    public void testPrimeCheckerIsFalse() {
+    	assertTrue(calculator.PrimeChecker(8).equals(false));
+    }
+    
+    @Test
+    public void testPrimeCheckerZero() {
+    	assertTrue(calculator.PrimeChecker(0).equals(false));
+    }
 }

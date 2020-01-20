@@ -23,5 +23,6 @@ public class App
         System.out.println("String to Binary: " + calculator.StringToBinary(1954533));
         System.out.println("Integer to Hexa: " + calculator.StringToHexa(1954533));
         System.out.println("QuadraticEquation: " + calculator.QuadraticEquation(1, 4, 3));
+        System.out.println("PrimeChecker: " + calculator.PrimeChecker(7));
     }
 }
