@@ -1,6 +1,6 @@
 language: java
 sudo: false
-script: cd ConsoleCalculator mvn install
+script: cd ConsoleCalculator mvn build mvn test mvn install
 before_deploy:
 - git config --local user.name "NectoJ"
 - git config --local user.email "jamielam321@gmail.com"
@@ -9,7 +9,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: jrs8swMtXJallbt2F+Tf3MOcfd6sZq1w8MpQcWg1YrFS06Lue/PJw8aHx3Wgl5uTqNRp7YXtobqdi9+21Ks7gTcsNSAgnSLlvWdi7zxEG7oBKPEpl6gYmcE0nxZcg0k6ZxX8T3xRid4emML73VMmsojkxApJYoufK94EqY2KoeKmT3eg5a/8GEP5i6LZNE5lafzVrf2cTTvFpGhM3xxiFhy5Ic50qFpUFu5A/g8o6nIYmiejaWClve3yF2xgmkeaJV4ECte0Wn4ZV84OW+N25J/aEuatinKgjcxZA+9OUxGrlkCsESYRXWcNWZaxfKTAxItlBZ1xXj9+Q7qKeoPLw6j9gJ75k8S+czE7HSEwqhevSjJml+WdgWK+ifuP/XFu1SIjImV0OlyX56VFwADzJmaM91VtwHQ4DjCS2l5yfaQlPnkDJ1hNvje+IFYRGt1ZhAF6Nv/F9wdkRdWI4ui9Ce1ZLx3QjK84TfW8qccHvSBWU4YVU9jmcp1/zElgPXsOoOMGlXFkoOnKdYmEqGrjCw56hqXvyQvdhcpPEK49WzzH51hizWIaKajCXvmdpmIVCZKkC7iedO+5v67dHGqx+hLU8RhYv/oCPF2IH907zUl1NhVffynBPIQghSJLWslSJUr1UMDkMIs3kr0/IcMIh72OUC3lJpEBFzGn1/rso1E=
+    secure: L0FYaJHBKMcuLb1a5kiauhwyU1F+6qVQk6da955sXggZoJvxIrAa1eIcXYqDOSgEj1gzF1eRrczL8LLDvlOqWm8gDA0X2zPM9AbLMzoM5DHwiCN7hZnlk0mdh6Q83WzCAqYWE9VDj6EEItoxAJb/2PzFBoAud6tufB4dG+ZiFmCjgNl67ZkMV5M3N1P/uDoH/UNahMv1myoBefci48LvGy+LSApj2AXsLj6dMvYmyrX3yCtZBpwqXNEE1TGdM9QsI/uhEGs9VCHFFOWCK04DsHLJIUftoLFQRpouzC1ZRZ2clgFGf/9lLiDgvgkRgDLkB8xBxfAjgF+FlwZFsPlEoAQXaA1YD6Ze2Meuyg0RlUmGOAzPaBvEZBB8EHnt5LqPMVgJyAM/Bw4bKePdqHx1gsd5lkC1fsXJ7ulPyajJd0+X1bNNsXvDeKF9tG0uQ47nmBBPfcgMGZ0Wgoilqxx2rG8UQFshzac/P0O1QXtRJkwhLX+IPItVmothxX39UqrUaZX+BY/Q4Aq8qtbuDHp37Oox1DTQq7Q9OaM/RZ8YDNzQh5BRONhgWguaKoGK3IOJv+76icF7/BJrCYaZyIQjXpO6ZLKKnYYCbqgXTR4zluNZTxBu/L87TBlM++WEWUGZp5rTXmMaVvNrTGaXpPW4eulxo9Ol+e9rJD74kYT6fsE=
   file: "/home/travis/.m2/repository/ch/bbw/ConsoleCalculator/1.0.0-SNAPSHOT/ConsoleCalculator-1.0.0-SNAPSHOT.jar"
   on:
     repo: NectoJ/ConsoleCalculator
