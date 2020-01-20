@@ -11,7 +11,6 @@ import java.util.List;
  * @author Jamie Lam
  * @version 0.0.1
  */
-
 public class Calculator {
 	
 	DecimalFormat df = new DecimalFormat("#.00"); 
@@ -33,8 +32,8 @@ public class Calculator {
 	}
 	
 	/**
-	 * Ich benutze keine private Methods da Sie bei JUnit Tests nicht getestet werden können. 
-	 * Begründung: Die Klassen sind voneinander separat.
+	 * Ich benutze keine private Methods da Sie bei JUnit Tests nicht getestet werden können.
+	 * Es gibt alternative wie PrivilegedAccessor die für solchen Zwecken benutzt werden.
 	 * 
 	 * Auf jedenfalls funktionieren public, protected und default Methoden.
 	 */

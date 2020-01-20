@@ -12,7 +12,6 @@ import org.junit.Test;
  * @author Jamie Lam
  * @version 30.11.2019
  */
-
 public class CalculatorTest {
 	
 	private Calculator calculator;
